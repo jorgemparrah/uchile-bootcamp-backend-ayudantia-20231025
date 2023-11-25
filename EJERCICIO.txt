@@ -1,0 +1,23 @@
+COMPRADOR
+- RUT
+- NombreCompleto
+* MUCHOS AUTOS
+
+AUTO
+- PATENTE
+- MARCA
+- MODELO
+- IMAGENES[]
+* UN COMPRADOR
+* VENDEDORES
+* MUCHAS IMAGENES
+
+IMAGEN
+- NombreImagen
+- Ruta
+* UN AUTO
+
+VENDEDOR
+- RUT
+- NombreCompleto
+* MUCHOS AUTOS

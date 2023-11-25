@@ -1,0 +1,27 @@
+Table Compradores {
+  rut VARCHAR(100) [pk]
+  nombre VARCHAR(100)
+}
+
+Table Autos {
+  patente VARCHAR(100) [pk]
+  marca VARCHAR(100)
+  modelo VARCHAR(100)
+  rutComprador VARCHAR(100) [ref: > Compradores.rut ]
+}
+
+Table Imagenes {
+  ruta VARCHAR(100) [pk]
+  nombre VARCHAR(100)
+  patenteAuto VARCHAR(100) [ref: > Autos.patente ]
+}
+
+Table Vendedores {
+  rut VARCHAR(100) [pk]
+  nombre VARCHAR(100)
+}
+
+Table AutoPorVendedor {
+  patenteAuto VARCHAR(100) [pk, ref: > Autos.patente ]
+  rutVendedor VARCHAR(100) [pk, ref: > Vendedores.rut ]
+}
